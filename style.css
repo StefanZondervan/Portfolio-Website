@@ -1,0 +1,329 @@
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  width: 100%;
+}
+
+/* Style for the logo */
+.logo {
+  position: fixed;
+  top: 3.42vh; /* Adjust the top distance as needed */
+  left: 6.84vw; /* Adjust the left distance as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2000; /* Optional: Set a high z-index to ensure it's above other content */
+}
+
+/* Foldout Menu Styles */
+.foldout-menu {
+  z-index: 1000;
+  position: fixed;
+  top: -100%; /* Initially hidden above the screen */
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  transition: top 0.5s; /* Animate the top position */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.menu-content {
+  text-align: center;
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.menu-item {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1vw;
+  margin: 10vw; /* Adjusted margin to center items */
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  color: rgb(255, 0, 255); /* Change color on hover */
+}
+
+.menu-button {
+  position: fixed;
+  top: 3.42vh;
+  right: 6.84vw;
+  cursor: pointer;
+  /* padding: 6.84vw; */
+  z-index: 1001;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+
+.menu-open {
+  top: 0; /* Slide down from the top */
+}
+
+h1,
+h2 {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: p22-mackinac-pro, serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4vw;
+  margin-bottom: 1vh;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Sageway {
+  text-align: justify;
+  text-align: center;
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-family: p22-mackinac-pro, serif;
+  font-weight: 500;
+  font-style: normal;
+  /* transform: translate(-50%, -50%) rotate(90deg); */
+}
+
+.info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: p22-mackinac-pro, serif;
+  display: none;
+  z-index: 1001;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.home-button {
+  color: rgb(255, 255, 255);
+  font-family: p22-mackinac-pro, serif;
+  font-size: 1.5vw;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.home-button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.left-title-section {
+  color: white;
+  text-align: left;
+  font-family: p22-mackinac-pro, serif;
+  font-size: 1.5vw;
+  font-style: normal;
+  margin: 0;
+}
+
+.right-title-section {
+  color: white;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+  font-style: normal;
+  margin: 0;
+}
+
+#sketch-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-main {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  margin-left: 6.84vw;
+  margin-right: 6.84vw;
+  gap: 5vh;
+}
+
+.wrapper.intro {
+  justify-content: space-between;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper.two,
+.wrapper.four,
+.wrapper.six {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.projectTitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.center {
+  position: relative;
+  width: 150%;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.text1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.Borders_Of_Defiance {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.bw-image {
+  border-radius: 2vh;
+  filter: grayscale(100%);
+  transition: filter 1s ease;
+  width: 100%;
+}
+
+.bw-image:hover {
+  filter: grayscale(0%);
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+  color: #fff; /* Text color */
+  text-align: center; /* Center-align the content */
+  padding-bottom: 3.42vh;
+}
+
+@media (max-width: 1200px) {
+  .container-main {
+    height: 100vh;
+  }
+  .container {
+    height: 40vh;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  .home-button {
+    font-size: 3vw;
+  }
+  .menu-item {
+    font-size: 2.5vw;
+  }
+  .bw-image {
+    filter: grayscale(0%); /* Disable grayscale filter to show full color */
+  }
+  .left-title-section,
+  .right-title-section {
+    font-size: 2.5vw;
+  }
+  .footer {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,259 @@
+body {
+  background-color: black;
+  margin: 0;
+  width: 100%;
+}
+
+/* Style for the logo */
+.logo {
+  position: fixed;
+  top: 3.42vh; /* Adjust the top distance as needed */
+  left: 6.84vw; /* Adjust the left distance as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2000; /* Optional: Set a high z-index to ensure it's above other content */
+}
+
+.header-pages {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.home-button {
+  color: rgb(255, 255, 255);
+  font-family: p22-mackinac-pro, serif;
+  font-size: 1.5vw;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+.home-button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Foldout Menu Styles */
+.foldout-menu {
+  z-index: 1000;
+  position: fixed;
+  top: -100%; /* Initially hidden above the screen */
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  transition: top 0.5s; /* Animate the top position */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.menu-content {
+  text-align: center;
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.menu-item {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1vw;
+  margin: 10vw; /* Adjusted margin to center items */
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  color: rgb(255, 0, 255); /* Change color on hover */
+}
+
+.menu-button {
+  position: fixed;
+  top: 3.42vh;
+  right: 6.84vw;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+
+.menu-open {
+  top: 0; /* Slide down from the top */
+}
+
+.Home {
+  color: white;
+  font-family: p22-mackinac-pro, serif;
+  font-size: 1.5vw;
+  margin: 0;
+  cursor: pointer;
+  position: flex;
+  text-align: center;
+  padding-top: 4vh;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Subtitle {
+  color: #ffffff;
+  font-size: 4vw;
+  font-family: p22-mackinac-pro, serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.left,
+.right {
+  position: relative;
+  width: 50%;
+}
+
+.wrapper center {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.wrapper {
+  width: 70%;
+  justify-content: center;
+  display: flex;
+  padding: 2.5vh;
+  gap: 5vh;
+}
+
+.wrapper.intro {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  color: white;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.text1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: left;
+}
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-top: 40vh; /* Adjust the margin-top as needed */
+  text-align: center; /* Center the text within the column horizontally */
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6.84vw;
+  padding-right: 6.84vw;
+}
+
+.column video {
+  width: 100%;
+  height: 100%;
+}
+
+.Titel_Image {
+  width: 100%;
+}
+
+.About_Image {
+  width: 60%;
+}
+
+.Cover_Side_1,
+.Cover_Side_2,
+.Cover_Back,
+.Cover_Nation {
+  width: 100%;
+}
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+  color: #fff; /* Text color */
+  text-align: center; /* Center-align the content */
+  padding-bottom: 3.42vh;
+  padding-top: 5vh;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .column {
+    display: block;
+  }
+  .wrapper {
+    padding: 0;
+    width: unset;
+  }
+  .column {
+    padding-left: 6.84vw;
+    padding-right: 6.84vw;
+  }
+  .wrapper.one {
+    display: block;
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  .About_Image {
+    width: 100%;
+  }
+  .Home {
+    font-size: 3vw;
+  }
+  .Subtitle {
+    font-size: 6vw;
+  }
+  .footer {
+    font-size: 3vw;
+  }
+  .menu-item {
+    font-size: 2.5vw;
+  }
+  .home-button {
+    font-size: 3vw;
+  }
+}
