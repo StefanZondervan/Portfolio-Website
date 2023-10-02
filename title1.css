@@ -2,6 +2,7 @@ body {
   background-color: black;
   margin: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
 /* Style for the logo */
@@ -75,9 +76,9 @@ body {
   transition: 0.5s;
 }
 
-.menu-item:hover {
-  color: rgb(255, 0, 255); /* Change color on hover */
-}
+/* .menu-item:hover {
+  color: rgb(255, 0, 255);
+} */
 
 .menu-button {
   position: fixed;
@@ -168,13 +169,13 @@ a {
 .center-column {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-  justify-content: center; /* Center the content vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  margin-top: 40vh; /* Adjust the margin-top as needed */
-  text-align: center; /* Center the text within the column horizontally */
+  text-align: center;
 }
 
 .column {
@@ -207,7 +208,7 @@ a {
 
 .footer {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: #fff; /* Text color */
   text-align: center; /* Center-align the content */
   padding-bottom: 3.42vh;
@@ -246,12 +247,14 @@ a {
   }
   .Subtitle {
     font-size: 6vw;
+    padding-bottom: 2.5vh;
   }
   .footer {
-    font-size: 3vw;
+    font-size: 2vw;
   }
   .menu-item {
-    font-size: 2.5vw;
+    font-size: 4vw;
+    margin: 6vw;
   }
   .home-button {
     font-size: 3vw;

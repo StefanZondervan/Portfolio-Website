@@ -49,3 +49,26 @@ menuButton.addEventListener("click", function (event) {
   foldoutMenu.classList.toggle("menu-open");
   isMenuOpen = !isMenuOpen;
 });
+
+// Function to toggle the visibility of the scroll-to-top button
+function toggleScrollToTopButtonVisibility() {
+  var scrollPosition = window.pageYOffset;
+  var scrollThreshold = 500; // Adjust this threshold as needed
+
+  // If user scrolled below the threshold, show the button; otherwise, hide it
+  if (scrollPosition > scrollThreshold) {
+    document.getElementById("scrollToTopButton").style.display = "block";
+  } else {
+    document.getElementById("scrollToTopButton").style.display = "none";
+  }
+}
+
+// Add a scroll event listener to toggle the button's visibility
+window.addEventListener("scroll", toggleScrollToTopButtonVisibility);
+
+// Add a click event listener to scroll to the top when the button is clicked
+document
+  .getElementById("scrollToTopButton")
+  .addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to the top
+  });
